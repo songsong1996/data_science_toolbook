@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Interactive component | Data Science Toolbook</title>
+  <title>Chapter 1 Machine Learning | Data Science Toolbook</title>
   <meta name="description" content="This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Interactive component | Data Science Toolbook" />
+  <meta property="og:title" content="Chapter 1 Machine Learning | Data Science Toolbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Interactive component | Data Science Toolbook" />
+  <meta name="twitter:title" content="Chapter 1 Machine Learning | Data Science Toolbook" />
   
   <meta name="twitter:description" content="This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="results.html"/>
-<link rel="next" href="conclusion.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="data-transformation.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -101,17 +101,66 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="interactive-component" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Interactive component</h1>
+<div id="machine-learning" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Machine Learning</h1>
+<div id="least-square" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Least Square</h2>
+<p>Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.<br />
+Basic functions are as follows:<br />
+<span style="color:blue"><span class="math inline">\(X_1\)</span> in function below is just a <span class="math inline">\(1\times n\)</span> column array.text</span><br />
+<span class="math display">\[
+\begin{align}
+Input: X^T &amp;= (X_1, X_2,......, X_p)  \\
+Prediction: \hat Y &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j
+\end{align}
+\]</span>
+If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are matrixes and use same symbols as previous chapter:<br />
+$$
+<span class="math display">\[\begin{align}
+input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
+X_1, X_2,......, X_p
+\end{bmatrix}\\
+&amp;=\begin{bmatrix}
+...... ,x_{1j} ,......\\
+......, x_{2j}, ......\\
+......,x_{3j} ,......\\
+.................\\
+......,x_{nj}, ......
+\end{bmatrix}\\
 
+Prediction: \hat Y_{n\times 1} &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j\\
+&amp;= \hat \beta_0 + \begin{bmatrix}
+x_{11}\\
+x_{21}\\
+x_{31}\\
+..\\
+x_{n1}\end{bmatrix}\hat \beta_1+... + \begin{bmatrix}
+x_{1j}\\
+x_{2j}\\
+x_{3j}\\
+..\\
+x_{nj}\end{bmatrix}\hat \beta_j+... + \begin{bmatrix}
+x_{1p}\\
+x_{2p}\\
+x_{3p}\\
+..\\
+x_{np}\end{bmatrix}\hat \beta_p\\
+\beta_0 : n\times 1 \\
+X_j : n\times 1
+\end{align}\]</span>
+$$
+## Nearest Neighbor
+Some Markdown text with <span style="color:blue">some <em>blue</em> text</span>.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-transformation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -142,7 +191,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/songsong1996/data_science_toolbook/edit/main/06-interactive.Rmd",
+"link": "https://github.com/songsong1996/data_science_toolbook/edit/main/01-Introduction.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -150,7 +199,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/songsong1996/data_science_toolbook/blob/main/06-interactive.Rmd",
+"link": "https://github.com/songsong1996/data_science_toolbook/blob/main/01-Introduction.Rmd",
 "text": null
 },
 "download": null,

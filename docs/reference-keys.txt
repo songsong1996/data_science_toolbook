@@ -1,5 +1,5 @@
-introduction-1
-linear-models-and-least-square
+machine-learning
+least-square
 data-transformation
 missing-values
 results
