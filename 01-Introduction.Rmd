@@ -42,9 +42,49 @@ Bias \ \hat \beta_0 : n\times 1 \\
 X_j : n\times 1
 \end{align}
 $$ 
-\\
-<span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times K$ matrix: </span>  
-
-
+    
+<span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times K$ matrix (fit different combinations of coefficients for different prediction): </span>  
+$$
+\begin{align}
+Input \ matrix: X_{n\times p} &= \begin{bmatrix}
+X_1, X_2,......, X_p \end{bmatrix}\\
+&=\begin{bmatrix}
+...... ,x_{1j} ,......\\
+......, x_{2j}, ......\\
+......,x_{3j} ,......\\
+.................\\
+......,x_{nj}, ......\end{bmatrix}\\
+Prediction: \hat Y_{n\times K} &= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j\\
+&=  \begin{bmatrix} \hat\beta_{01},\hat\beta_{02},...,\hat\beta_{0K}\\ \hat\beta_{01},\hat\beta_{02},...,\hat\beta_{0K}\\ \hat\beta_{01},\hat\beta_{02},...,\hat\beta_{0K}  \end{bmatrix} + \begin{bmatrix}
+x_{11}\\
+x_{21}\\
+x_{31}\\
+..\\
+x_{n1}\end{bmatrix}\begin{bmatrix} \hat\beta_{11},\hat\beta_{12},...,\hat\beta_{1K} \end{bmatrix}    +... + \begin{bmatrix}
+x_{1j}\\
+x_{2j}\\
+x_{3j}\\
+..\\
+x_{nj}\end{bmatrix} \begin{bmatrix} \hat\beta_{j1},\hat\beta_{j2},...,\hat\beta_{jK} \end{bmatrix}   +... + \begin{bmatrix}
+x_{1p}\\
+x_{2p}\\
+x_{3p}\\
+..\\
+x_{np}\end{bmatrix}\begin{bmatrix} \hat\beta_{p1},\hat\beta_{p2},...,\hat\beta_{pK} \end{bmatrix} \\
+Bias \ \hat \beta_0 : n\times K \\
+X_j : n\times 1
+\end{align}
+$$
+   
+<span style="color:blue">Summarize as: </span>  
+$$
+\begin{align}
+f(X) &=\hat Y= X^T \boldsymbol{\hat \beta}  \\
+\hat Y &: n\times 1 \\
+X^T &: n\times (p+1) \\
+\boldsymbol{\hat \beta} &: (p+1)\times 1
+\end{align}
+$$
+    
 ## Nearest Neighbor
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
