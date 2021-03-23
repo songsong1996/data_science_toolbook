@@ -1,5 +1,5 @@
 introduction
-data-sources
+linear-models-and-least-square
 data-transformation
 missing-values
 results

@@ -1,4 +1,4 @@
-book_filename: "finalproj"
+book_filename: "data-science-toolbook"
 output_dir: docs
 delete_merged_file: true
 edit: https://github.com/songsong1996/data_science_toolbook/edit/main/%s
