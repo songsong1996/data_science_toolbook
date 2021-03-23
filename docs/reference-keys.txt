@@ -1,6 +1,5 @@
 machine-learning
 least-square
-nearest-neighbor
 data-transformation
 missing-values
 results

@@ -2,7 +2,7 @@
 ## Least Square  
 Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.  
 Basic functions are as follows:  
-<span style="color:blue">$X$ is a $1\times n$ column vector and $\hat Y$ is a single output: </span>  
+<span style="color:brown">$X$ is a $1\times n$ column vector and $\hat Y$ is a single output: </span>  
 $$
 \begin{align}
 Input: vector \ X^T &= (X_1, X_2,......, X_p)  \\
@@ -10,7 +10,7 @@ Prediction: scalar\ \hat Y &= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j
 \end{align}
 $$
 
-<span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times 1$ column vector: </span>   
+<span style="color:brown">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times 1$ column vector: </span>   
 $$
 \begin{align}
 Input \ matrix: X_{n\times p} &= \begin{bmatrix}
@@ -43,7 +43,7 @@ X_j : n\times 1
 \end{align}
 $$ 
     
-<span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times K$ matrix (fit different combinations of coefficients for different prediction): </span>  
+<span style="color:brown">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times K$ matrix (fit different combinations of coefficients for different prediction): </span>  
 $$
 \begin{align}
 Input \ matrix: X_{n\times p} &= \begin{bmatrix}
@@ -76,7 +76,7 @@ X_j : n\times 1
 \end{align}
 $$
     
-<span style="color:blue">Summarize as: </span>  
+<span style="color:brown">Summarize as: </span>  
 $$
 \begin{align}
 f(X) &=\hat Y= X^T \boldsymbol{\hat \beta}  \\
@@ -86,5 +86,6 @@ X^T &: n\times (p+1) \\
 \end{align}
 $$
     
+In order to 
 ## Nearest Neighbor
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
