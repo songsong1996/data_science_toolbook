@@ -199,3 +199,28 @@ $$
 - Expectation is approximated by averaging over sample data.  
 - Conditioning at a point is relaxed to conditioning on some region “close” to the target point. (k gets larger, average more stable)  
 
+
+### Linear Regression fit into this framework  
+**If assume $f(x)=X\beta$**  
+$$
+f(x)\approx x^T\beta
+$$
+**Into EPE then differentiate**  
+$$
+\begin{align}
+EPE &=E((Y-f(X))^2)\\
+&= E((Y-X^T\beta)^2) \\
+&=E(Y^TY)+E[(X^T\beta)^TX^T\beta]-2E[X\beta Y]\\
+Diff: \ \frac{dEPE}{d\beta} &=2\beta\beta^T E(XX^T)=2\beta E[XY] \\
+\beta&= E[XX^T]^{-1}E[XY]
+\end{align} 
+$$
+For least square, it uses average values to represent expectations.  
+
+
+### Summary  
+So both k-nearest neighbors and least squares end up approximating conditional expectations by averages. But they differ dramatically in terms of model assumptions:  
+
+- Least squares assumes $f(x)$ is well approximated by a globally linear function.  
+- k-nearest neighbors assumes $f(x)$ is well approximated by a locally constant function.  
+

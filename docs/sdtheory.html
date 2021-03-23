@@ -90,6 +90,8 @@
 <li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a>
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="sdtheory.html"><a href="sdtheory.html#knn-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.1</b> KNN fit into this framework</a></li>
+<li class="chapter" data-level="1.3.2" data-path="sdtheory.html"><a href="sdtheory.html#linear-regression-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.2</b> Linear Regression fit into this framework</a></li>
+<li class="chapter" data-level="1.3.3" data-path="sdtheory.html"><a href="sdtheory.html#summary-2"><i class="fa fa-check"></i><b>1.3.3</b> Summary</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="searchingfor.html"><a href="searchingfor.html"><i class="fa fa-check"></i><b>2</b> SearchingFor</a></li>
@@ -160,6 +162,33 @@ N,k \rightarrow \infty, \frac{k}{N} \rightarrow 0,\hat f(x) \rightarrow E(Y|X=x)
 <li>Expectation is approximated by averaging over sample data.<br />
 </li>
 <li>Conditioning at a point is relaxed to conditioning on some region “close” to the target point. (k gets larger, average more stable)</li>
+</ul>
+</div>
+<div id="linear-regression-fit-into-this-framework" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Linear Regression fit into this framework</h3>
+<p><strong>If assume <span class="math inline">\(f(x)=X\beta\)</span></strong><br />
+<span class="math display">\[
+f(x)\approx x^T\beta
+\]</span>
+<strong>Into EPE then differentiate</strong><br />
+<span class="math display">\[
+\begin{align}
+EPE &amp;=E((Y-f(X))^2)\\
+&amp;= E((Y-X^T\beta)^2) \\
+&amp;=E(Y^TY)+E[(X^T\beta)^TX^T\beta]-2E[X\beta Y]\\
+Diff: \ \frac{dEPE}{d\beta} &amp;=2\beta\beta^T E(XX^T)=2\beta E[XY] \\
+\beta&amp;= E[XX^T]^{-1}E[XY]
+\end{align} 
+\]</span>
+For least square, it uses average values to represent expectations.</p>
+</div>
+<div id="summary-2" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Summary</h3>
+<p>So both k-nearest neighbors and least squares end up approximating conditional expectations by averages. But they differ dramatically in terms of model assumptions:</p>
+<ul>
+<li>Least squares assumes <span class="math inline">\(f(x)\)</span> is well approximated by a globally linear function.<br />
+</li>
+<li>k-nearest neighbors assumes <span class="math inline">\(f(x)\)</span> is well approximated by a locally constant function.</li>
 </ul>
 
 </div>

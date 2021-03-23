@@ -9,6 +9,8 @@ summary-1
 from-least-square-to-nearest-neighbor
 sdtheory
 knn-fit-into-this-framework
+linear-regression-fit-into-this-framework
+summary-2
 searchingfor
 missing-values
 results
