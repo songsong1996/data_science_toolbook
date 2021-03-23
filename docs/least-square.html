@@ -75,24 +75,9 @@
 </ul></li>
 <li class="chapter" data-level="1" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>1</b> Machine Learning</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="least-square.html"><a href="least-square.html"><i class="fa fa-check"></i><b>1.1</b> Least Square</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="least-square.html"><a href="least-square.html#basic-functions"><i class="fa fa-check"></i><b>1.1.1</b> Basic Functions</a></li>
-<li class="chapter" data-level="1.1.2" data-path="least-square.html"><a href="least-square.html#objection"><i class="fa fa-check"></i><b>1.1.2</b> Objection</a></li>
-<li class="chapter" data-level="1.1.3" data-path="least-square.html"><a href="least-square.html#summary"><i class="fa fa-check"></i><b>1.1.3</b> Summary</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html"><i class="fa fa-check"></i><b>1.2</b> Nearest Neighbor</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#basic-functions-1"><i class="fa fa-check"></i><b>1.2.1</b> Basic Functions</a></li>
-<li class="chapter" data-level="1.2.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#summary-1"><i class="fa fa-check"></i><b>1.2.2</b> Summary</a></li>
-<li class="chapter" data-level="1.2.3" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#from-least-square-to-nearest-neighbor"><i class="fa fa-check"></i><b>1.2.3</b> From Least Square to Nearest Neighbor</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="sdtheory.html"><a href="sdtheory.html#knn-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.1</b> KNN fit into this framework</a></li>
-<li class="chapter" data-level="1.3.2" data-path="sdtheory.html"><a href="sdtheory.html#linear-regression-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.2</b> Linear Regression fit into this framework</a></li>
-<li class="chapter" data-level="1.3.3" data-path="sdtheory.html"><a href="sdtheory.html#summary-2"><i class="fa fa-check"></i><b>1.3.3</b> Summary</a></li>
-</ul></li>
+<li class="chapter" data-level="1.1" data-path="least-square.html"><a href="least-square.html"><i class="fa fa-check"></i><b>1.1</b> Least Square</a></li>
+<li class="chapter" data-level="1.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html"><i class="fa fa-check"></i><b>1.2</b> Nearest Neighbor</a></li>
+<li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="searchingfor.html"><a href="searchingfor.html"><i class="fa fa-check"></i><b>2</b> SearchingFor</a></li>
 <li class="chapter" data-level="3" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>3</b> Missing values</a></li>
@@ -122,9 +107,8 @@
 <div id="least-square" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Least Square</h2>
 <p>Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.</p>
-<div id="basic-functions" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Basic Functions</h3>
-<p>Basic functions are as follows:<br />
+<p><font size="5"> <strong>Basic Functions</strong></font><br />
+Basic functions are as follows:<br />
 <span style="color:brown"><span class="math inline">\(X\)</span> is a <span class="math inline">\(1\times n\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a single output: </span><br />
 <span class="math display">\[
 \begin{align}
@@ -210,10 +194,8 @@ X &amp;: n\times (p+1) \\
 \boldsymbol{\hat \beta} &amp;: (p+1)\times 1
 \end{align}
 \]</span></p>
-</div>
-<div id="objection" class="section level3" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Objection</h3>
-<p>Minimizing Residual Sum Square (RSS) is usually used to fit coefficients. Since RSS is a quandratic function of <span class="math inline">\(\beta\)</span>, therefore its minimum always exists.<br />
+<p><font size="5"> <strong>Objection</strong></font><br />
+Minimizing Residual Sum Square (RSS) is usually used to fit coefficients. Since RSS is a quandratic function of <span class="math inline">\(\beta\)</span>, therefore its minimum always exists.<br />
 <span class="math display">\[
 \begin{align}
 RSS(\beta) &amp;=\sum_{i=1}^N (y_i-X_i^T\beta)^2 \\
@@ -228,13 +210,10 @@ X^TX\beta&amp;=X^TY \\
 \beta&amp;=(X^TX)^{-1}X^TY
 \end{align}
 \]</span></p>
-</div>
-<div id="summary" class="section level3" number="1.1.3">
-<h3><span class="header-section-number">1.1.3</span> Summary</h3>
+<p><font size="5"> <strong>Summary</strong></font></p>
 <ul>
 <li>More fit for <strong>Scenario</strong>: The training data in each class were generated from bivariate Gaussian distributions with uncorrelated components and different means.</li>
 </ul>
-</div>
 </div>
             </section>
 

@@ -75,24 +75,9 @@
 </ul></li>
 <li class="chapter" data-level="1" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>1</b> Machine Learning</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="least-square.html"><a href="least-square.html"><i class="fa fa-check"></i><b>1.1</b> Least Square</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="least-square.html"><a href="least-square.html#basic-functions"><i class="fa fa-check"></i><b>1.1.1</b> Basic Functions</a></li>
-<li class="chapter" data-level="1.1.2" data-path="least-square.html"><a href="least-square.html#objection"><i class="fa fa-check"></i><b>1.1.2</b> Objection</a></li>
-<li class="chapter" data-level="1.1.3" data-path="least-square.html"><a href="least-square.html#summary"><i class="fa fa-check"></i><b>1.1.3</b> Summary</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html"><i class="fa fa-check"></i><b>1.2</b> Nearest Neighbor</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#basic-functions-1"><i class="fa fa-check"></i><b>1.2.1</b> Basic Functions</a></li>
-<li class="chapter" data-level="1.2.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#summary-1"><i class="fa fa-check"></i><b>1.2.2</b> Summary</a></li>
-<li class="chapter" data-level="1.2.3" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#from-least-square-to-nearest-neighbor"><i class="fa fa-check"></i><b>1.2.3</b> From Least Square to Nearest Neighbor</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="sdtheory.html"><a href="sdtheory.html#knn-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.1</b> KNN fit into this framework</a></li>
-<li class="chapter" data-level="1.3.2" data-path="sdtheory.html"><a href="sdtheory.html#linear-regression-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.2</b> Linear Regression fit into this framework</a></li>
-<li class="chapter" data-level="1.3.3" data-path="sdtheory.html"><a href="sdtheory.html#summary-2"><i class="fa fa-check"></i><b>1.3.3</b> Summary</a></li>
-</ul></li>
+<li class="chapter" data-level="1.1" data-path="least-square.html"><a href="least-square.html"><i class="fa fa-check"></i><b>1.1</b> Least Square</a></li>
+<li class="chapter" data-level="1.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html"><i class="fa fa-check"></i><b>1.2</b> Nearest Neighbor</a></li>
+<li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="searchingfor.html"><a href="searchingfor.html"><i class="fa fa-check"></i><b>2</b> SearchingFor</a></li>
 <li class="chapter" data-level="3" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>3</b> Missing values</a></li>
@@ -125,17 +110,14 @@
 <img src="imgs/15_knn.png" width="300" />
 <img src="imgs/1_knn.png" width="300" />
 </p>
-<div id="basic-functions-1" class="section level3" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Basic Functions</h3>
-<p><span class="math inline">\(N_k(x)\)</span> is neighbor of x, assuming Euclidean distance.<br />
+<p><font size="5"> <strong>Basic Functions</strong></font><br />
+<span class="math inline">\(N_k(x)\)</span> is neighbor of x, assuming Euclidean distance.<br />
 <span class="math display">\[
 \begin{align}
 \hat Y(x) &amp;=\frac{1}{k}\sum_{x_i\in N_k(x)} y_i \\
 \end{align}
 \]</span></p>
-</div>
-<div id="summary-1" class="section level3" number="1.2.2">
-<h3><span class="header-section-number">1.2.2</span> Summary</h3>
+<p><font size="5"> <strong>Summary</strong></font></p>
 <ul>
 <li>Effective number of parameters for KNN is <span class="math inline">\(N/k\)</span> while for MLS is p (number of <span class="math inline">\(\beta_i\)</span>), although it seems the number of neighbors k is number of parameter of KNN while p is number of parameter of MLS. And <span class="math inline">\(N/k\)</span> is usually larger than p.<br />
 To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes <span class="math inline">\(N/k\)</span> parameters (one mean for each neighborhoods).<br />
@@ -144,9 +126,7 @@ To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes <sp
 </li>
 <li>We cannot use Sum Square Error for KNN, because it will always goes to k=1.</li>
 </ul>
-</div>
-<div id="from-least-square-to-nearest-neighbor" class="section level3" number="1.2.3">
-<h3><span class="header-section-number">1.2.3</span> From Least Square to Nearest Neighbor</h3>
+<p><font size="5"> <strong>From Least Square to Nearest Neighbor</strong></font></p>
 <table>
 <colgroup>
 <col width="3%" />
@@ -205,7 +185,6 @@ To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes <sp
 </li>
 <li>Projection pursuit and neural network models consist of sums of non-linearly transformed linear models.</li>
 </ul>
-</div>
 </div>
             </section>
 
