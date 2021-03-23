@@ -75,7 +75,7 @@ Bias \ \hat \beta_0 : n\times K \\
 X_j : n\times 1
 \end{align}
 $$
-   
+    
 <span style="color:blue">Summarize as: </span>  
 $$
 \begin{align}
