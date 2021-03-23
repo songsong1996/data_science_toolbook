@@ -1,0 +1,3 @@
+# SearchingFor  
+nonsingular
+mixture of gaussian

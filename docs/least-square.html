@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Machine Learning | Data Science Toolbook</title>
+  <title>1.1 Least Square | Data Science Toolbook</title>
   <meta name="description" content="This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Machine Learning | Data Science Toolbook" />
+  <meta property="og:title" content="1.1 Least Square | Data Science Toolbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Machine Learning | Data Science Toolbook" />
+  <meta name="twitter:title" content="1.1 Least Square | Data Science Toolbook" />
   
   <meta name="twitter:description" content="This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="variable-types-and-symbols.html"/>
-<link rel="next" href="least-square.html"/>
+<link rel="prev" href="machine-learning.html"/>
+<link rel="next" href="nearest-neighbor.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -107,17 +107,124 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="machine-learning" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Machine Learning</h1>
-<div style="page-break-after: always;"></div>
+<div id="least-square" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Least Square</h2>
+<p>Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.</p>
+<div id="basic-functions" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Basic Functions</h3>
+<p>Basic functions are as follows:<br />
+<span style="color:brown"><span class="math inline">\(X\)</span> is a <span class="math inline">\(1\times n\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a single output: </span><br />
+<span class="math display">\[
+\begin{align}
+Input: vector \ X^T &amp;= \begin{bmatrix} X_1, X_2,......, X_p \end{bmatrix}  \\
+Coefficients: \ vector \ \beta&amp;= \begin{bmatrix} \hat\beta_0\\ \hat\beta_1\\ ... \\ \hat\beta_p \end{bmatrix} \\
+Prediction: scalar\ \hat Y &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j \\
+&amp;=X^T\beta
+\end{align}
+\]</span></p>
+<p><span style="color:brown"><span class="math inline">\(X\)</span> is a <span class="math inline">\(n\times p\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a <span class="math inline">\(n\times 1\)</span> column vector: </span><br />
+<span class="math display">\[
+\begin{align}
+Input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
+X_1, X_2,......, X_p \end{bmatrix}\\
+&amp;=\begin{bmatrix}
+...... ,x_{1j} ,......\\
+......, x_{2j}, ......\\
+......,x_{3j} ,......\\
+.................\\
+......,x_{nj}, ......\end{bmatrix}\\
+Prediction: \hat Y_{n\times 1} &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j\\
+&amp;= \hat \beta_0 + \begin{bmatrix}
+x_{11}\\
+x_{21}\\
+x_{31}\\
+..\\
+x_{n1}\end{bmatrix}\hat \beta_1+... + \begin{bmatrix}
+x_{1j}\\
+x_{2j}\\
+x_{3j}\\
+..\\
+x_{nj}\end{bmatrix}\hat \beta_j+... + \begin{bmatrix}
+x_{1p}\\
+x_{2p}\\
+x_{3p}\\
+..\\
+x_{np}\end{bmatrix}\hat \beta_p\\
+&amp;=X\beta \\
+Bias \ \hat \beta_0 &amp;: n\times 1 \\
+X_j &amp;: n\times 1 \\
+X &amp;: n\times p \\
+\beta&amp;: p\times 1
+\end{align}
+\]</span></p>
+<p><span style="color:brown"><span class="math inline">\(X\)</span> is a <span class="math inline">\(n\times p\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a <span class="math inline">\(n\times K\)</span> matrix (fit different combinations of coefficients for different prediction): </span><br />
+<span class="math display">\[
+\begin{align}
+Input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
+X_1, X_2,......, X_p \end{bmatrix}\\
+&amp;=\begin{bmatrix}
+...... ,x_{1j} ,......\\
+......, x_{2j}, ......\\
+......,x_{3j} ,......\\
+.................\\
+......,x_{nj}, ......\end{bmatrix}\\
+Prediction: \hat Y_{n\times K} &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j\\
+&amp;=  \begin{bmatrix} \hat\beta_{01},\hat\beta_{02},...,\hat\beta_{0K}\\ \hat\beta_{01},\hat\beta_{02},...,\hat\beta_{0K}\\ \hat\beta_{01},\hat\beta_{02},...,\hat\beta_{0K}  \end{bmatrix} + \begin{bmatrix}
+x_{11}\\
+x_{21}\\
+x_{31}\\
+..\\
+x_{n1}\end{bmatrix}\begin{bmatrix} \hat\beta_{11},\hat\beta_{12},...,\hat\beta_{1K} \end{bmatrix}    +... + \begin{bmatrix}
+x_{1j}\\
+x_{2j}\\
+x_{3j}\\
+..\\
+x_{nj}\end{bmatrix} \begin{bmatrix} \hat\beta_{j1},\hat\beta_{j2},...,\hat\beta_{jK} \end{bmatrix}   +... + \begin{bmatrix}
+x_{1p}\\
+x_{2p}\\
+x_{3p}\\
+..\\
+x_{np}\end{bmatrix}\begin{bmatrix} \hat\beta_{p1},\hat\beta_{p2},...,\hat\beta_{pK} \end{bmatrix} \\
+Bias \ \hat \beta_0 : n\times K \\
+X_j : n\times 1
+\end{align}
+\]</span></p>
+<p><span style="color:brown">Summarize as: </span><br />
+<span class="math display">\[
+\begin{align}
+f(X) &amp;=\hat Y= X \boldsymbol{\hat \beta}  \\
+\hat Y &amp;: n\times 1 \\
+X &amp;: n\times (p+1) \\
+\boldsymbol{\hat \beta} &amp;: (p+1)\times 1
+\end{align}
+\]</span></p>
+</div>
+<div id="objection" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Objection</h3>
+<p>Minimizing Residual Sum Square (RSS) is usually used to fit coefficients. Since RSS is a quandratic function of <span class="math inline">\(\beta\)</span>, therefore its minimum always exists.<br />
+<span class="math display">\[
+\begin{align}
+RSS(\beta) &amp;=\sum_{i=1}^N (y_i-X_i^T\beta)^2 \\
+&amp;= (Y-X\beta)^T(Y-X\beta)
+\end{align}
+\]</span></p>
+<p>DIfferenciate RSS:<br />
+<span class="math display">\[
+\begin{align}
+\frac{dRSS}{d\beta}&amp;=X^T(Y-X\beta)=0\\
+X^TX\beta&amp;=X^TY \\
+\beta&amp;=(X^TX)^{-1}X^TY
+\end{align}
+\]</span></p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="variable-types-and-symbols.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="least-square.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="machine-learning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="nearest-neighbor.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

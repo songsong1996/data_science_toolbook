@@ -1,12 +1,18 @@
-# Machine Learning
+# Machine Learning  
+This is a chapter of machine learning. Reference of book ESLII.  
+
 ## Least Square  
 Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.  
+  
+### Basic Functions  
 Basic functions are as follows:  
 <span style="color:brown">$X$ is a $1\times n$ column vector and $\hat Y$ is a single output: </span>  
 $$
 \begin{align}
-Input: vector \ X^T &= (X_1, X_2,......, X_p)  \\
-Prediction: scalar\ \hat Y &= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j
+Input: vector \ X^T &= \begin{bmatrix} X_1, X_2,......, X_p \end{bmatrix}  \\
+Coefficients: \ vector \ \beta&= \begin{bmatrix} \hat\beta_0\\ \hat\beta_1\\ ... \\ \hat\beta_p \end{bmatrix} \\
+Prediction: scalar\ \hat Y &= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j \\
+&=X^T\beta
 \end{align}
 $$
 
@@ -38,8 +44,11 @@ x_{2p}\\
 x_{3p}\\
 ..\\
 x_{np}\end{bmatrix}\hat \beta_p\\
-Bias \ \hat \beta_0 : n\times 1 \\
-X_j : n\times 1
+&=X\beta \\
+Bias \ \hat \beta_0 &: n\times 1 \\
+X_j &: n\times 1 \\
+X &: n\times p \\
+\beta&: p\times 1
 \end{align}
 $$ 
     
@@ -79,12 +88,30 @@ $$
 <span style="color:brown">Summarize as: </span>  
 $$
 \begin{align}
-f(X) &=\hat Y= X^T \boldsymbol{\hat \beta}  \\
+f(X) &=\hat Y= X \boldsymbol{\hat \beta}  \\
 \hat Y &: n\times 1 \\
-X^T &: n\times (p+1) \\
+X &: n\times (p+1) \\
 \boldsymbol{\hat \beta} &: (p+1)\times 1
 \end{align}
 $$
-    
-In order to 
-## Nearest Neighbor
+   
+### Objection  
+Minimizing Residual Sum Square (RSS) is usually used to fit coefficients. Since RSS is a quandratic function of $\beta$, therefore its minimum always exists.  
+$$
+\begin{align}
+RSS(\beta) &=\sum_{i=1}^N (y_i-X_i^T\beta)^2 \\
+&= (Y-X\beta)^T(Y-X\beta)
+\end{align}
+$$
+  
+DIfferenciate RSS:  
+$$
+\begin{align}
+\frac{dRSS}{d\beta}&=X^T(Y-X\beta)=0\\
+X^TX\beta&=X^TY \\
+\beta&=(X^TX)^{-1}X^TY
+\end{align}
+$$
+
+## Nearest Neighbor {#nearest-neighbor}  
+

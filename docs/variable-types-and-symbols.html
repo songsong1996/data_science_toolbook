@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Machine Learning | Data Science Toolbook</title>
+  <title>Variable Types and Symbols | Data Science Toolbook</title>
   <meta name="description" content="This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Machine Learning | Data Science Toolbook" />
+  <meta property="og:title" content="Variable Types and Symbols | Data Science Toolbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Machine Learning | Data Science Toolbook" />
+  <meta name="twitter:title" content="Variable Types and Symbols | Data Science Toolbook" />
   
   <meta name="twitter:description" content="This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="variable-types-and-symbols.html"/>
-<link rel="next" href="least-square.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="machine-learning.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -107,17 +107,42 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="machine-learning" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Machine Learning</h1>
-<div style="page-break-after: always;"></div>
+<div id="variable-types-and-symbols" class="section level2 unnumbered">
+<h2>Variable Types and Symbols</h2>
+<p>Since <span class="math inline">\(X_j\)</span> is <span class="math inline">\(n\times p\)</span> column vector, although we called <span class="math inline">\(X\)</span> as a matrix of <span class="math inline">\(n\times p\)</span>, actually, <span class="math inline">\(X\)</span> is <span class="math inline">\(X^T\)</span>.
+<span class="math display">\[
+\begin{align}
+input \ vector: X_j &amp; = \begin{bmatrix}
+x_{j,1}\\x_{j,2}\\
+..\\
+x_{j,p} \\
+\end{bmatrix}\\
+input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
+x_{1,1},x_{1,2},......x_{1,p} \\
+x_{2,1},x_{2,2},......x_{2,p} \\
+.................. \\
+x_{n,1},x_{n,2},......x_{n,p}
+\end{bmatrix}\\
+&amp;=\begin{bmatrix}
+X_1^T\\
+X_2^T\\
+.\\
+.\\
+X_n^T
+\end{bmatrix}\\
+estimation &amp;=\hat Y
+\end{align}
+\]</span></p>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="variable-types-and-symbols.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="least-square.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="machine-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -148,7 +173,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/rmarkdown-book/edit/master/01-Introduction.Rmd",
+"link": "https://github.com/rstudio/rmarkdown-book/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -156,7 +181,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/songsong1996/data_science_toolbook/blob/main/01-Introduction.Rmd",
+"link": "https://github.com/songsong1996/data_science_toolbook/blob/main/index.Rmd",
 "text": null
 },
 "download": ["data-science-toolbook.pdf"],

@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-transformation.html"/>
+<link rel="prev" href="searchingfor.html"/>
 <link rel="next" href="results.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -71,19 +71,25 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Contents</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#variable-types-and-symbols"><i class="fa fa-check"></i>Variable Types and Symbols</a></li>
+<li class="chapter" data-level="" data-path="variable-types-and-symbols.html"><a href="variable-types-and-symbols.html"><i class="fa fa-check"></i>Variable Types and Symbols</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>1</b> Machine Learning</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="machine-learning.html"><a href="machine-learning.html#least-square"><i class="fa fa-check"></i><b>1.1</b> Least Square</a></li>
+<li class="chapter" data-level="1.1" data-path="least-square.html"><a href="least-square.html"><i class="fa fa-check"></i><b>1.1</b> Least Square</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="least-square.html"><a href="least-square.html#basic-functions"><i class="fa fa-check"></i><b>1.1.1</b> Basic Functions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="least-square.html"><a href="least-square.html#objection"><i class="fa fa-check"></i><b>1.1.2</b> Objection</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>2</b> Data transformation</a></li>
+<li class="chapter" data-level="1.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html"><i class="fa fa-check"></i><b>1.2</b> Nearest Neighbor</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="searchingfor.html"><a href="searchingfor.html"><i class="fa fa-check"></i><b>2</b> SearchingFor</a></li>
 <li class="chapter" data-level="3" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>3</b> Missing values</a></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a></li>
 <li class="chapter" data-level="5" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>5</b> Interactive component</a></li>
 <li class="chapter" data-level="6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="_blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -110,7 +116,7 @@
           </div>
         </div>
       </div>
-<a href="data-transformation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="searchingfor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -127,8 +133,8 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
@@ -142,7 +148,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/songsong1996/data_science_toolbook/edit/main/04-missing.Rmd",
+"link": "https://github.com/rstudio/rmarkdown-book/edit/master/04-missing.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -153,9 +159,9 @@ gitbook.start({
 "link": "https://github.com/songsong1996/data_science_toolbook/blob/main/04-missing.Rmd",
 "text": null
 },
-"download": null,
+"download": ["data-science-toolbook.pdf"],
 "toc": {
-"collapse": "subsection"
+"collapse": "none"
 }
 });
 });

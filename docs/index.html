@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="machine-learning.html"/>
+<link rel="next" href="variable-types-and-symbols.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -71,19 +71,25 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Contents</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#variable-types-and-symbols"><i class="fa fa-check"></i>Variable Types and Symbols</a></li>
+<li class="chapter" data-level="" data-path="variable-types-and-symbols.html"><a href="variable-types-and-symbols.html"><i class="fa fa-check"></i>Variable Types and Symbols</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>1</b> Machine Learning</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="machine-learning.html"><a href="machine-learning.html#least-square"><i class="fa fa-check"></i><b>1.1</b> Least Square</a></li>
+<li class="chapter" data-level="1.1" data-path="least-square.html"><a href="least-square.html"><i class="fa fa-check"></i><b>1.1</b> Least Square</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="least-square.html"><a href="least-square.html#basic-functions"><i class="fa fa-check"></i><b>1.1.1</b> Basic Functions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="least-square.html"><a href="least-square.html#objection"><i class="fa fa-check"></i><b>1.1.2</b> Objection</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>2</b> Data transformation</a></li>
+<li class="chapter" data-level="1.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html"><i class="fa fa-check"></i><b>1.2</b> Nearest Neighbor</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="searchingfor.html"><a href="searchingfor.html"><i class="fa fa-check"></i><b>2</b> SearchingFor</a></li>
 <li class="chapter" data-level="3" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>3</b> Missing values</a></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a></li>
 <li class="chapter" data-level="5" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>5</b> Interactive component</a></li>
 <li class="chapter" data-level="6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="_blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -107,34 +113,6 @@
 </div>
 <div id="contents" class="section level1 unnumbered">
 <h1>Contents</h1>
-<div id="variable-types-and-symbols" class="section level2 unnumbered">
-<h2>Variable Types and Symbols</h2>
-<p>Since <span class="math inline">\(X_j\)</span> is <span class="math inline">\(n\times p\)</span> column vector, although we called <span class="math inline">\(X\)</span> as a matrix of <span class="math inline">\(n\times p\)</span>, actually, <span class="math inline">\(X\)</span> is <span class="math inline">\(X^T\)</span>.
-<span class="math display">\[
-\begin{align}
-input \ vector: X_j &amp; = \begin{bmatrix}
-x_{j,1}\\x_{j,2}\\
-..\\
-x_{j,p} \\
-\end{bmatrix}\\
-input \ matrix: X^T_{n\times p} &amp;= \begin{bmatrix}
-x_{1,1},x_{1,2},......x_{1,p} \\
-x_{2,1},x_{2,2},......x_{2,p} \\
-.................. \\
-x_{n,1},x_{n,2},......x_{n,p}
-\end{bmatrix}\\
-&amp;=\begin{bmatrix}
-X_1^T\\
-X_2^T\\
-.\\
-.\\
-X_n^T
-\end{bmatrix}\\
-estimation &amp;=\hat Y
-\end{align}
-\]</span></p>
-
-</div>
 </div>
             </section>
 
@@ -142,7 +120,7 @@ estimation &amp;=\hat Y
         </div>
       </div>
 
-<a href="machine-learning.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="variable-types-and-symbols.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -158,8 +136,8 @@ estimation &amp;=\hat Y
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
@@ -173,7 +151,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/songsong1996/data_science_toolbook/edit/main/index.Rmd",
+"link": "https://github.com/rstudio/rmarkdown-book/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -184,9 +162,9 @@ gitbook.start({
 "link": "https://github.com/songsong1996/data_science_toolbook/blob/main/index.Rmd",
 "text": null
 },
-"download": null,
+"download": ["data-science-toolbook.pdf"],
 "toc": {
-"collapse": "subsection"
+"collapse": "none"
 }
 });
 });

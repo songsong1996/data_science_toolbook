@@ -1,6 +1,9 @@
 machine-learning
 least-square
-data-transformation
+basic-functions
+objection
+nearest-neighbor
+searchingfor
 missing-values
 results
 interactive-component
