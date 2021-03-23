@@ -2,9 +2,10 @@ machine-learning
 least-square
 basic-functions
 objection
+summary
 nearest-neighbor
 basic-functions-1
-summary
+summary-1
 from-least-square-to-nearest-neighbor-ls-knn
 searchingfor
 missing-values

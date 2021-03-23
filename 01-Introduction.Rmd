@@ -112,6 +112,7 @@ X^TX\beta&=X^TY \\
 \beta&=(X^TX)^{-1}X^TY
 \end{align}
 $$
+  
 ### Summary 
 1. More fit for **Scenario**: The training data in each class were generated from bivariate Gaussian distributions with uncorrelated components and different means.
 
