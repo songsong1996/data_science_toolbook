@@ -4,7 +4,7 @@ This is a chapter of machine learning. Reference of book ESLII.
 ## Least Square  
 Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.  
   
-### Basic Functions  
+### Basic Functions   
 Basic functions are as follows:  
 <span style="color:brown">$X$ is a $1\times n$ column vector and $\hat Y$ is a single output: </span>  
 $$
@@ -112,7 +112,7 @@ X^TX\beta&=X^TY \\
 \beta&=(X^TX)^{-1}X^TY
 \end{align}
 $$
-### Summary  
+### Summary 
 1. More fit for **Scenario**: The training data in each class were generated from bivariate Gaussian distributions with uncorrelated components and different means.
 
 ## Nearest Neighbor {#nearest-neighbor}  
