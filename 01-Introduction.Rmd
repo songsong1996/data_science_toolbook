@@ -187,3 +187,15 @@ $$
   
 Best prediction of Y at any point $X=x$ is the conditional mean (when measured by **average square error**).  
 
+### KNN fit into this framework  
+For KNN, this receipt is directly applied, since average of each neigborhoods is computed.  
+$$ 
+\hat f(x)=Ave(y_i|x_i x_i\in N_k(x))  \\
+N,k \rightarrow \infty, \frac{k}{N} \rightarrow 0,\hat f(x) \rightarrow E(Y|X=x)
+$$
+
+**2 Assumption here**:  
+
+- Expectation is approximated by averaging over sample data.  
+- Conditioning at a point is relaxed to conditioning on some region “close” to the target point. (k gets larger, average more stable)  
+

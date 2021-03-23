@@ -8,6 +8,7 @@ basic-functions-1
 summary-1
 from-least-square-to-nearest-neighbor
 sdtheory
+knn-fit-into-this-framework
 searchingfor
 missing-values
 results

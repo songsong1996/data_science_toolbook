@@ -87,7 +87,10 @@
 <li class="chapter" data-level="1.2.2" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#summary-1"><i class="fa fa-check"></i><b>1.2.2</b> Summary</a></li>
 <li class="chapter" data-level="1.2.3" data-path="nearest-neighbor.html"><a href="nearest-neighbor.html#from-least-square-to-nearest-neighbor"><i class="fa fa-check"></i><b>1.2.3</b> From Least Square to Nearest Neighbor</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a></li>
+<li class="chapter" data-level="1.3" data-path="sdtheory.html"><a href="sdtheory.html"><i class="fa fa-check"></i><b>1.3</b> Statistical Decision Theory</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="sdtheory.html"><a href="sdtheory.html#knn-fit-into-this-framework"><i class="fa fa-check"></i><b>1.3.1</b> KNN fit into this framework</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="searchingfor.html"><a href="searchingfor.html"><i class="fa fa-check"></i><b>2</b> SearchingFor</a></li>
 <li class="chapter" data-level="3" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>3</b> Missing values</a></li>
@@ -145,7 +148,21 @@ f(x) = min EPE= argmin_c \ E_{Y|X}([Y-c]^2|X=x)
 f(x)=E(Y|X=x)
 \]</span></p>
 <p>Best prediction of Y at any point <span class="math inline">\(X=x\)</span> is the conditional mean (when measured by <strong>average square error</strong>).</p>
+<div id="knn-fit-into-this-framework" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> KNN fit into this framework</h3>
+<p>For KNN, this receipt is directly applied, since average of each neigborhoods is computed.<br />
+<span class="math display">\[ 
+\hat f(x)=Ave(y_i|x_i x_i\in N_k(x))  \\
+N,k \rightarrow \infty, \frac{k}{N} \rightarrow 0,\hat f(x) \rightarrow E(Y|X=x)
+\]</span></p>
+<p><strong>2 Assumption here</strong>:</p>
+<ul>
+<li>Expectation is approximated by averaging over sample data.<br />
+</li>
+<li>Conditioning at a point is relaxed to conditioning on some region “close” to the target point. (k gets larger, average more stable)</li>
+</ul>
 
+</div>
 </div>
 <!-- </div> -->
             </section>
