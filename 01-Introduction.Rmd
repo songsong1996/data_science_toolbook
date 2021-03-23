@@ -13,17 +13,14 @@ $$
 <span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times 1$ column vector: </span>   
 $$
 \begin{align}
-input \ matrix: X_{n\times p} &= \begin{bmatrix}
-X_1, X_2,......, X_p
-\end{bmatrix}\\
+Input \ matrix: X_{n\times p} &= \begin{bmatrix}
+X_1, X_2,......, X_p \end{bmatrix}\\
 &=\begin{bmatrix}
 ...... ,x_{1j} ,......\\
 ......, x_{2j}, ......\\
 ......,x_{3j} ,......\\
 .................\\
-......,x_{nj}, ......
-\end{bmatrix}\\
-
+......,x_{nj}, ......\end{bmatrix}\\
 Prediction: \hat Y_{n\times 1} &= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j\\
 &= \hat \beta_0 + \begin{bmatrix}
 x_{11}\\
@@ -41,10 +38,11 @@ x_{2p}\\
 x_{3p}\\
 ..\\
 x_{np}\end{bmatrix}\hat \beta_p\\
-bias \ \hat \beta_0 : n\times 1 \\
+Bias \ \hat \beta_0 : n\times 1 \\
 X_j : n\times 1
 \end{align}
-$$
+$$ 
+\\
 <span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times K$ matrix: </span>  
 
 

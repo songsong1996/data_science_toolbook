@@ -116,19 +116,16 @@ Prediction: scalar\ \hat Y &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j
 \end{align}
 \]</span></p>
 <p><span style="color:blue"><span class="math inline">\(X\)</span> is a <span class="math inline">\(n\times p\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a <span class="math inline">\(n\times 1\)</span> column vector: </span><br />
-$$
-<span class="math display">\[\begin{align}
-input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
-X_1, X_2,......, X_p
-\end{bmatrix}\\
+<span class="math display">\[
+\begin{align}
+Input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
+X_1, X_2,......, X_p \end{bmatrix}\\
 &amp;=\begin{bmatrix}
 ...... ,x_{1j} ,......\\
 ......, x_{2j}, ......\\
 ......,x_{3j} ,......\\
 .................\\
-......,x_{nj}, ......
-\end{bmatrix}\\
-
+......,x_{nj}, ......\end{bmatrix}\\
 Prediction: \hat Y_{n\times 1} &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j\\
 &amp;= \hat \beta_0 + \begin{bmatrix}
 x_{11}\\
@@ -146,10 +143,11 @@ x_{2p}\\
 x_{3p}\\
 ..\\
 x_{np}\end{bmatrix}\hat \beta_p\\
-bias \ \hat \beta_0 : n\times 1 \\
+Bias \ \hat \beta_0 : n\times 1 \\
 X_j : n\times 1
-\end{align}\]</span>
-$$
+\end{align}
+\]</span>
+\
 <span style="color:blue"><span class="math inline">\(X\)</span> is a <span class="math inline">\(n\times p\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a <span class="math inline">\(n\times K\)</span> matrix: </span></p>
 </div>
 <div id="nearest-neighbor" class="section level2" number="1.2">
