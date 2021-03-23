@@ -1,3 +1,4 @@
 # SearchingFor  
 nonsingular
-mixture of gaussian
+mixture of gaussian  
+condition expectation  

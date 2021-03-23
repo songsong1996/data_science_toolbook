@@ -7,6 +7,7 @@ nearest-neighbor
 basic-functions-1
 summary-1
 from-least-square-to-nearest-neighbor
+sdtheory
 searchingfor
 missing-values
 results

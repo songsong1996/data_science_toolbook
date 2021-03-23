@@ -146,9 +146,44 @@ To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes $N/
 | Scenario   | The training data in each class were generated from bivariate Gaussian distributions with uncorrelated components and different means. | The training data in each class came from a mixture of 10 low- variance Gaussian distributions, with individual means themselves distributed as Gaussian.   |
 
   
-**Methods to enhance KNN and LS**    
+**Methods to enhance KNN and LS**  
+
 - Kernel methods use weights that decrease smoothly to zero with dis- tance from the target point, rather than the effective 0/1 weights used by k-nearest neighbors.  
 - In high-dimensional spaces the distance kernels are modified to em-phasize some variable more than others.  
 - Local regression fits linear models by **locally weighted least squares**, rather than fitting constants locally.  
 - Linear models fit to a basis expansion of the original inputs allow arbitrarily complex models.   
 - Projection pursuit and neural network models consist of sums of non-linearly transformed linear models.  
+
+## Statistical Decision Theory {#sdtheory}  
+Let $X \in R^p$ denote a real valued random input vector, and $Y \in R$ a real valued random output variable, with joint distribution $Pr(X,Y)$. We seek a function $f(X)$
+for predicting $Y$ given values of the input $X$. This theory requires a loss function $L(Y,f(X))$ for **penalizing errors in prediction**, and by far the most 
+common and convenient is squared error loss: $L(Y,f(X)) = (Y −f(X))^2$ . This leads us to a criterion for choosing $f$.  
+**Expected Prediction Error (EPE)**  
+$$
+\begin{align}
+EPE(f) &= E((Y-f(X))^2) \\
+&= \int (y-f(x))^2 Pr(dx,dy)
+\end{align}
+$$
+**By conditioning on x**: 
+$$
+\begin{align}
+EPE=E_X E_{Y|X}([Y-f(x)]^2|X)
+\end{align}
+$$
+  
+> Conditional Expectation: 
+$$\begin{align} E_{XY}(\alpha)&= E_{X}E_{Y|X}(\alpha|X)\\ &=E_{Y}E_{X|Y}(\alpha|Y) \end{align}$$
+
+**munimize EPE pointwise**:  
+$$
+f(x) = min EPE= argmin_c \ E_{Y|X}([Y-c]^2|X=x)
+$$
+  
+**Solution**:  
+$$
+f(x)=E(Y|X=x)
+$$
+  
+Best prediction of Y at any point $X=x$ is the conditional mean (when measured by **average square error**).  
+
