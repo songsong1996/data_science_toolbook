@@ -4,6 +4,7 @@ basic-functions
 objection
 nearest-neighbor
 basic-functions-1
+summary
 from-least-square-to-nearest-neighbor-ls-knn
 searchingfor
 missing-values

@@ -127,7 +127,8 @@ $$
 \hat Y(x) &=\frac{1}{k}\sum_{x_i\in N_k(x)} y_i \\
 \end{align}
 $$
-### Summary
+  
+### Summary  
 1. Effective number of parameters for KNN is $N/k$ while for MLS is p (number of $\beta_i$), although it seems the number of neighbors k is number of parameter of KNN while p is number of parameter of MLS. And $N/k$ is usually larger than p.  
 To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes $N/k$ parameters (one mean for each neighborhoods).  
 2. More fit for **Scenario**: The training data in each class came from a mixture of 10 low- variance Gaussian distributions, with individual means themselves distributed as Gaussian.  
