@@ -108,14 +108,14 @@
 <h2><span class="header-section-number">1.1</span> Least Square</h2>
 <p>Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.<br />
 Basic functions are as follows:<br />
-<span style="color:blue"><span class="math inline">\(X\)</span> in function below is just a <span class="math inline">\(1\times n\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a single output</span>.<br />
+<span style="color:blue"><span class="math inline">\(X\)</span> is a <span class="math inline">\(1\times n\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a single output: </span><br />
 <span class="math display">\[
 \begin{align}
 Input: vector \ X^T &amp;= (X_1, X_2,......, X_p)  \\
 Prediction: scalar\ \hat Y &amp;= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j
 \end{align}
-\]</span>
-If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are matrixes and use same symbols as previous chapter:<br />
+\]</span></p>
+<p><span style="color:blue"><span class="math inline">\(X\)</span> is a <span class="math inline">\(n\times p\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a <span class="math inline">\(n\times 1\)</span> column vector: </span><br />
 $$
 <span class="math display">\[\begin{align}
 input \ matrix: X_{n\times p} &amp;= \begin{bmatrix}
@@ -149,7 +149,8 @@ x_{np}\end{bmatrix}\hat \beta_p\\
 bias \ \hat \beta_0 : n\times 1 \\
 X_j : n\times 1
 \end{align}\]</span>
-$$</p>
+$$
+<span style="color:blue"><span class="math inline">\(X\)</span> is a <span class="math inline">\(n\times p\)</span> column vector and <span class="math inline">\(\hat Y\)</span> is a <span class="math inline">\(n\times K\)</span> matrix: </span></p>
 </div>
 <div id="nearest-neighbor" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Nearest Neighbor</h2>

@@ -2,14 +2,15 @@
 ## Least Square  
 Least Square is most simple method for quantative prediction, which makes huge assumptions about structure and yields stable but possibly inaccurate predictions.  
 Basic functions are as follows:  
-<span style="color:blue">$X$ in function below is just a $1\times n$ column vector and $\hat Y$ is a single output</span>.  
+<span style="color:blue">$X$ is a $1\times n$ column vector and $\hat Y$ is a single output: </span>  
 $$
 \begin{align}
 Input: vector \ X^T &= (X_1, X_2,......, X_p)  \\
 Prediction: scalar\ \hat Y &= \hat \beta_0+\sum_{j=1}^p X_j \hat \beta_j
 \end{align}
 $$
-If $X$ and $Y$ are matrixes and use same symbols as previous chapter:   
+
+<span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times 1$ column vector: </span>   
 $$
 \begin{align}
 input \ matrix: X_{n\times p} &= \begin{bmatrix}
@@ -44,7 +45,7 @@ bias \ \hat \beta_0 : n\times 1 \\
 X_j : n\times 1
 \end{align}
 $$
-
+<span style="color:blue">$X$ is a $n\times p$ column vector and $\hat Y$ is a $n\times K$ matrix: </span>  
 
 
 ## Nearest Neighbor
