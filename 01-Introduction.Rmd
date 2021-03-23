@@ -114,4 +114,14 @@ X^TX\beta&=X^TY \\
 $$
 
 ## Nearest Neighbor {#nearest-neighbor}  
-
+<p float="left">
+  <img src="imgs/15_knn.png" width="300" />
+  <img src="imgs/1_knn.png" width="300" /> 
+</p>
+### Basic Functions  
+$N_k(x)$ is neighbor of x, assuming Euclidean distance.  
+$$
+\begin{align}
+\hat Y(x) &=\frac{1}{k}\sum_{x_i\in N_k(x)} y_i \\
+\end{align}
+$$
