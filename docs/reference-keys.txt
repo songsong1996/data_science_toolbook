@@ -6,7 +6,7 @@ summary
 nearest-neighbor
 basic-functions-1
 summary-1
-from-least-square-to-nearest-neighbor-ls-knn
+from-least-square-to-nearest-neighbor
 searchingfor
 missing-values
 results
