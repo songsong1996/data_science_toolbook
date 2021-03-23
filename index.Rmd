@@ -1,9 +1,11 @@
 --- 
 title: "Data Science Toolbook"
 author: "Heather Song"
-date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Introduction
+**Introduction**  
+This markdown book is a brief summary of fundamental knowledge for data scientist, including machine learning, deep learning, statistics and etc.  
+The basic contents of each chapters are as follows:  
+
 
