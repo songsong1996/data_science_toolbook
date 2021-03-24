@@ -235,6 +235,41 @@ $$
   
 This retains the additivity of the linear model, but each coordinate function $f_j$ is arbitrary. It turns out that the optimal estimate for the additive model uses techniques such as k-nearest neighbors to approximate **univariate conditional expectations** simultaneously for each of the coordinate functions. Thus the problems of estimating a conditional expectation in high dimensions are swept away in this case by imposing some (often unrealistic) model assumptions, in this case additivity.
 
-**Conditional Medium**  
+**Conditional Medium:**  
 When using l1 loss:  
 $$\hat f(x)=medium (Y|X=x) \ \  when \ E|Y-f(X)| $$
+
+<font size="5"> **Classification fit into this framework**</font>  
+An estimate $G$ will assume values in $G$, the set of possible classes. Our loss function can be represented by a $K \times K$ matrix $L$, where $K = card(G)$. $L$ will be **zero on the diagonal and nonnegative elsewhere**, where $L(k,l)$ is the price paid for classifying an observation belonging to class $G_k$ as $G_l$. Most often we use the **zero–one** loss function, where all misclassifications are charged a single unit. The expected prediction error is:  
+$$
+EPE=E[L(G,\hat G(X))]
+$$
+**Take joint distribution $P_r(G,X)$ into consideration:**  
+$$
+EPE=E_X\sum_{k=1}^K L(G_k,\hat G_k(X))P_r(G_k|X)
+$$
+**Minimize EPE pointwise**  
+$$
+\hat G(x)=argmin E_X\sum_{k=1}^K L(G_k,\hat G_k(X))P_r(G_k|X)
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

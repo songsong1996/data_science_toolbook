@@ -2,3 +2,4 @@
 nonsingular
 mixture of gaussian  
 condition expectation  
+with 0-1 loss function

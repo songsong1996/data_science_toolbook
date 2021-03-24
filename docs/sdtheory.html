@@ -175,9 +175,22 @@ For least square, it uses average values to represent expectations.</p>
 f(x)=\sum_{j=1}^p f_j(X_j)
 \]</span></p>
 <p>This retains the additivity of the linear model, but each coordinate function <span class="math inline">\(f_j\)</span> is arbitrary. It turns out that the optimal estimate for the additive model uses techniques such as k-nearest neighbors to approximate <strong>univariate conditional expectations</strong> simultaneously for each of the coordinate functions. Thus the problems of estimating a conditional expectation in high dimensions are swept away in this case by imposing some (often unrealistic) model assumptions, in this case additivity.</p>
-<p><strong>Conditional Medium</strong><br />
+<p><strong>Conditional Medium:</strong><br />
 When using l1 loss:<br />
 <span class="math display">\[\hat f(x)=medium (Y|X=x) \ \  when \ E|Y-f(X)| \]</span></p>
+<p><font size="5"> <strong>Classification fit into this framework</strong></font><br />
+An estimate <span class="math inline">\(G\)</span> will assume values in <span class="math inline">\(G\)</span>, the set of possible classes. Our loss function can be represented by a <span class="math inline">\(K \times K\)</span> matrix <span class="math inline">\(L\)</span>, where <span class="math inline">\(K = card(G)\)</span>. <span class="math inline">\(L\)</span> will be <strong>zero on the diagonal and nonnegative elsewhere</strong>, where <span class="math inline">\(L(k,l)\)</span> is the price paid for classifying an observation belonging to class <span class="math inline">\(G_k\)</span> as <span class="math inline">\(G_l\)</span>. Most often we use the <strong>zero–one</strong> loss function, where all misclassifications are charged a single unit. The expected prediction error is:<br />
+<span class="math display">\[
+EPE=E[L(G,\hat G(X))]
+\]</span>
+<strong>Take joint distribution <span class="math inline">\(P_r(G,X)\)</span> into consideration:</strong><br />
+<span class="math display">\[
+EPE=E_X\sum_{k=1}^K L(G_k,\hat G_k(X))P_r(G_k|X)
+\]</span>
+<strong>Minimize EPE pointwise</strong><br />
+<span class="math display">\[
+\hat G(x)=argmin E_X\sum_{k=1}^K L(G_k,\hat G_k(X))P_r(G_k|X)
+\]</span></p>
 
 </div>
 <!-- </div> -->
