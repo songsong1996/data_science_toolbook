@@ -142,10 +142,10 @@ To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes $N/
 |            | Least Square                                                                                                                           | K Nearest Neighbor                                                                                                                                          |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Assumption | a linear boundary is appropriate                                                                                                       | no straight assumption                                                                                                                                      |
-| Reason     |                                                                                                                                        | Depends on hadful points and their particular position, slightly changes may cause result changing.                                                         |
+| Reason     |                                                                                                                                        | Depends on handful points and their particular position, slightly changes may cause result changing.                                                         |
 | Variance   | low                                                                                                                                    | high                                                                                                                                                        |
 | Bias       | high                                                                                                                                   | low                                                                                                                                                         |
-| Stability  |                                                                                                                                        | unstable                                                                                                                                                    |
+| Stability  | stable                                                                                                                  | unstable                                                                                                                                                    |
 | Scenario   | The training data in each class were generated from bivariate Gaussian distributions with uncorrelated components and different means. | The training data in each class came from a mixture of 10 low- variance Gaussian distributions, with individual means themselves distributed as Gaussian.   |
 
   
@@ -249,9 +249,32 @@ $$
 EPE=E_X\sum_{k=1}^K L(G_k,\hat G_k(X))P_r(G_k|X)
 $$
 **Minimize EPE pointwise**  
+$\hat G(X)$ become constant.E_X is constant,  
 $$
-\hat G(x)=argmin E_X\sum_{k=1}^K L(G_k,\hat G_k(X))P_r(G_k|X)
+\hat G(x)=argmin \sum_{k=1}^K L(G_k,g)P_r(G_k|X=x)
 $$
+**with 0-1 loss**  
+$$
+\hat G(x)=argmin _{g\in G} [1-P_r(g|X=x)]
+$$
+**Or simply**:  
+Bayesian classifier: classify to most probable class.  
+$$
+\hat G(x)=G_k \ \ if \ P_r(G_k|X=x) =max _{g\in G} P_r(g|X=x)
+$$
+<p float="left">
+  <img src="imgs/bayesian_exmp1.png" width="600" />
+</p>  
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
-# SearchingFor  
+# Supplyment list  
 nonsingular
 mixture of gaussian  
 condition expectation  
-with 0-1 loss function
+0-1 loss function

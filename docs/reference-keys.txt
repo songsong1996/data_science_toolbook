@@ -2,7 +2,7 @@ machine-learning
 least-square
 nearest-neighbor
 sdtheory
-searchingfor
+supplyment-list
 missing-values
 results
 interactive-component
