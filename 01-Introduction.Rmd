@@ -134,9 +134,9 @@ $$
 
 - Effective number of parameters for KNN is $N/k$ while for MLS is p (number of $\beta_i$), although it seems the number of neighbors k is number of parameter of KNN while p is number of parameter of MLS. And $N/k$ is usually larger than p.  
 To get an idea of why, if all neighborhoods are nonoverlapping, KNN computes $N/k$ parameters (one mean for each neighborhoods).  
-- More fit for **Scenario**: The training data in each class came from a mixture of 10 low- variance Gaussian distributions, with individual means themselves distributed as Gaussian.  
+- More fit for **Scenario**: The training data in each class came from a mixture of 10 low-variance Gaussian distributions, with individual means themselves distributed as Gaussian.  
 - We cannot use Sum Square Error for KNN, because it will always goes to k=1.  
-
+- In low dimension, when dataset is large and neiborhood is fairly large, we could always approximate the theoretically optimal conditional expectation by k-nearest-neighbor averaging. However this approach and our intuition breaks down in high dimensions, and the phenomenon is commonly referred to as the curse of dimensionality (Bellman, 1961).  
 <font size="5"> **From Least Square to Nearest Neighbor**</font> 
   
 |            | Least Square                                                                                                                           | K Nearest Neighbor                                                                                                                                          |
@@ -266,12 +266,33 @@ $$
   <img src="imgs/bayesian_exmp1.png" width="600" />
 </p>  
 
+## Local Methods in high dimension  
+<p float="left">
+  <img src="imgs/cube.png" width="600" />
+</p>  
 
 
+Let $r$ be fraction of observations for one central target point.  
+For KNN, when dimension is high, if neighborhood is a hyper-cube, expected edge length will be $e_p(r)=r^{1/p}$  
+So to capture 1% or 10% of the data to form a local average, we must cover 63% or 80% of the range of each input variable. Such neighborhoods are no longer “local.” Reducing $r$ dramatically does not help much either, since the fewer observations we average, the higher is the variance of our fit.  
 
+**Another situation**  
+Another consequence of the sparse sampling in high dimensions is that all sample points are close to an edge of the sample. Consider N data points uniformly distributed in a p-dimensional unit ball centered at the origin. Suppose we consider a nearest-neighbor estimate at the origin. The median distance from the origin to the closest data point is given by the expression:  
+$$
+d(p,N)=\left( 1-\frac{1}{2}^{1/N} \right)^{1/p}
 
+$$
 
+**Example**  
+Assume true relationship between $X$ and $Y$:  
+$$
+Y=e^{-8||X||^2}\\
+MSE=var(\hat y_0)+bias^2(\hat y_0)
+$$
 
+<p float="left">
+  <img src="imgs/fig2_7.png" width="600" />
+</p>  
 
 
 

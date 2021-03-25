@@ -2,6 +2,7 @@ machine-learning
 least-square
 nearest-neighbor
 sdtheory
+local-methods-in-high-dimension
 supplyment-list
 missing-values
 results
